@@ -13,14 +13,15 @@ body {
   --secondary-text-color: #5c5c62;
   --durability-text-color: #6a737d9c;
   --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --border-color: #00ff7345;
+  --text-decoration-color: #00ff7363;
 }
 
 .container {
   margin: 0 auto;
   padding: 0 30px;
   max-width: 900px;
+  background: #ffffff;
 }
 
 .fh {
@@ -263,4 +264,54 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+/* styles for toggle */
+label {
+  display: block;
+  margin: auto;
+  width: 250px;
+  height: 100px;
+  position: relative;
+  background: #ebebeb;
+  border-radius: 200px;
+  box-shadow: inset 0px 15px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+label::after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background: linear-gradient(180deg, #ffcc89, #d8860b);
+  border-radius: 90px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+input {
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+}
+input:checked + label {
+  background: #242424;
+}
+input:checked + label:after {
+  left: 100px;
+  transform: translateX(50px);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+input:checked + label + div.resume div.container {
+  background: #21262b;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #5c5c62;
+  --durability-text-color: #6a737d9c;
+  --icon-color: #6a737d;
+  --border-color: #00ff7345;
+  --text-decoration-color: #00ff7363;
+  transition: 0.3s;
 }
