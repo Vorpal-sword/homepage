@@ -332,17 +332,42 @@ input:checked + label + div.resume {
   background: #21262b;
   transition: 0.3s;
 }
-
+/* label svg */
+label svg {
+  position: absolute;
+  width: 35px;
+  top: -76px;
+  z-index: 100;
+}
+label svg.sun {
+  left: 9px;
+  fill: #e3ff46e8;
+  transition: 0.3s;
+}
+label svg.moon {
+  left: 79px;
+  fill: #7e7e7e;
+  transition: 0.3s;
+}
+input:checked + label svg.sun {
+  fill: #2e2e2e;
+}
+input:checked + label svg.moon {
+  fill: #fff;
+}
 /* btn download */
 .download-button {
   display: block;
   margin: 0 auto 20px;
   background: linear-gradient(90deg, #00cf5e, #00d15eb7);
-  color: #fff;
+  color: #ffffffd2;
   padding: 10px 15px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: bold;
 }
 
 .download-button:hover {
