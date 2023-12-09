@@ -151,18 +151,12 @@
           </div>
         </div>
       </div>
-      <button
-        id="download-resume"
-        class="download-button"
-        onclick="downloadResume()"
-      >
+      <button class="download-button" onclick="downloadResume()">
         Download Resume
       </button>
       <script>
         function downloadResume() {
           var resumeBlock = document.querySelector(".resume");
-
-          // Зберегти стан елементів, які потрібно приховати
           var elementsToHide = Array.from(
             resumeBlock.parentElement.children
           ).filter(function (element) {
@@ -172,16 +166,10 @@
           var originalDisplayStyle = elementsToHide.map(function (element) {
             return element.style.display;
           });
-
-          // Приховати елементи, які не є дочірніми блоку .resume
           elementsToHide.forEach(function (element) {
             element.style.display = "none";
           });
-
-          // Викликати діалогове вікно друку браузера
           window.print();
-
-          // Відновити початковий стан елементів після завершення друку
           elementsToHide.forEach(function (element, index) {
             element.style.display = originalDisplayStyle[index];
           });

@@ -293,7 +293,7 @@ label::after {
   position: absolute;
   top: 2px;
   left: 4px;
-  background: linear-gradient(180deg, #00ff73b7, #00c257);
+  background: linear-gradient(180deg, #00ff73b7, #00b853);
   border-radius: 45px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
   transition: 0.3s;
@@ -312,7 +312,7 @@ input:checked + label {
 input:checked + label::after {
   left: 50px;
   transform: translateX(25px);
-  background: linear-gradient(180deg, #777, #3a3a3a);
+  background: linear-gradient(90deg, #00ff73, #00e065b7);
 }
 
 input:checked + label + div.resume div.container {
@@ -337,7 +337,7 @@ input:checked + label + div.resume {
 .download-button {
   display: block;
   margin: 0 auto 20px;
-  background: linear-gradient(90deg, #00c257, #00d15eb7);
+  background: linear-gradient(90deg, #00cf5e, #00d15eb7);
   color: #fff;
   padding: 10px 15px;
   border: none;
