@@ -323,14 +323,16 @@ input:checked + label + div.resume {
 }
 /* btn download */
 .download-button {
-  background-color: #4caf50; /* Зелений колір */
-  color: #fff; /* Білий колір тексту */
+  display: block;
+  margin: 0px auto 20px auto;
+
+  background: linear-gradient(90deg, #00c257, #00d15eb7);
+  color: #fff;
   padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
 }
-
 .download-button:hover {
-  background-color: #45a049; /* Змінений колір при наведенні */
+  background: linear-gradient(90deg, #00ac4d, #00bd55b7);
 }

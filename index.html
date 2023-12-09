@@ -8,13 +8,6 @@
   </head>
   <body>
     <main>
-      <button
-        id="download-resume"
-        class="download-button"
-        onclick="downloadResume()"
-      >
-        Download Resume
-      </button>
       <input type="checkbox" id="darkmode-toggle" />
       <label for="darkmode-toggle"></label>
 
@@ -158,6 +151,13 @@
           </div>
         </div>
       </div>
+      <button
+        id="download-resume"
+        class="download-button"
+        onclick="downloadResume()"
+      >
+        Download Resume
+      </button>
       <script>
         function downloadResume() {
           var resumeBlock = document.querySelector(".resume");
