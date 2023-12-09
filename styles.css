@@ -12,15 +12,17 @@ body {
   --primary-text-color: #181820;
   --secondary-text-color: #5c5c62;
   --durability-text-color: #6a737d9c;
-  --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --icon-color: #00ad4ede;
+  --border-color: #00ff7345;
+  --text-decoration-color: #00ff7363;
 }
 
 .container {
   margin: 0 auto;
   padding: 0 30px;
   max-width: 900px;
+  background: #ffffff;
+  transition: 0.3s;
 }
 
 .fh {
@@ -41,6 +43,7 @@ body {
   box-shadow: 1px 1px 7px 7px #f5f5f5;
   padding: 30px 0;
   max-width: 900px;
+  transition: 0.3s;
 }
 
 .resume__block {
@@ -171,7 +174,7 @@ body {
 }
 /* Experience and additional info styles */
 
-.experiences {
+.languages {
   flex: 1 1 60%;
   margin-right: 50px;
 }
@@ -263,4 +266,73 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+/* styles for toggle */
+label {
+  display: block;
+  margin: auto;
+  width: 125px;
+  height: 50px;
+  position: relative;
+  background: #ebebeb;
+  border-radius: 125px;
+  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.4),
+    inset 0px -2px 5px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: 0.3s;
+}
+label::after {
+  content: "";
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  background: linear-gradient(180deg, #00ff73b7, #00c257);
+  border-radius: 45px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+input {
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+}
+input:checked + label {
+  background: #242424;
+}
+input:checked + label:after {
+  left: 50px;
+  transform: translateX(25px);
+  background: linear-gradient(180deg, #777, #3a3a3a);
+}
+input:checked + label + div.resume div.container {
+  background: #21262b;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #ffffff;
+  --durability-text-color: #ffffffbe;
+  --icon-color: #00ff73b7;
+  --border-color: #00ff73b7;
+  --text-decoration-color: #00ff73b7;
+  transition: 0.3s;
+}
+input:checked + label + div.resume {
+  background: #21262b;
+  transition: 0.3s;
+}
+/* btn download */
+.download-button {
+  display: block;
+  margin: 0px auto 20px auto;
+
+  background: linear-gradient(90deg, #00c257, #00d15eb7);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.download-button:hover {
+  background: linear-gradient(90deg, #00ac4d, #00bd55b7);
 }
