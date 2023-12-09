@@ -316,3 +316,7 @@ input:checked + label + div.resume div.container {
   --text-decoration-color: #00ff73b7;
   transition: 0.3s;
 }
+input:checked + label + div.resume {
+  background: #21262b;
+  transition: 0.3s;
+}
