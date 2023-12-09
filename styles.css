@@ -45,13 +45,14 @@ body {
   max-width: 900px;
   transition: 0.3s;
 }
-
 .resume__block {
   border-bottom: 3px solid var(--border-color);
   padding-bottom: 30px;
   margin-bottom: 15px;
 }
-
+.resume__block-last {
+  border-bottom: 0px;
+}
 @media screen and (width <= 576px) {
   .main-info,
   .contact_info_container {
@@ -197,8 +198,6 @@ body {
 
 .experiences__company-header-name {
   color: var(--primary-text-color);
-  text-decoration-color: var(--text-decoration-color);
-  text-decoration-line: underline;
   text-align: left;
   margin-bottom: 20px;
 }
