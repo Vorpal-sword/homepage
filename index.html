@@ -8,8 +8,16 @@
   </head>
   <body>
     <main>
+      <button
+        id="download-resume"
+        class="download-button"
+        onclick="downloadResume()"
+      >
+        Download Resume
+      </button>
       <input type="checkbox" id="darkmode-toggle" />
       <label for="darkmode-toggle"></label>
+
       <div class="resume">
         <div class="container">
           <div class="resume__block">
@@ -150,6 +158,35 @@
           </div>
         </div>
       </div>
+      <script>
+        function downloadResume() {
+          var resumeBlock = document.querySelector(".resume");
+
+          // Зберегти стан елементів, які потрібно приховати
+          var elementsToHide = Array.from(
+            resumeBlock.parentElement.children
+          ).filter(function (element) {
+            return element !== resumeBlock;
+          });
+
+          var originalDisplayStyle = elementsToHide.map(function (element) {
+            return element.style.display;
+          });
+
+          // Приховати елементи, які не є дочірніми блоку .resume
+          elementsToHide.forEach(function (element) {
+            element.style.display = "none";
+          });
+
+          // Викликати діалогове вікно друку браузера
+          window.print();
+
+          // Відновити початковий стан елементів після завершення друку
+          elementsToHide.forEach(function (element, index) {
+            element.style.display = originalDisplayStyle[index];
+          });
+        }
+      </script>
     </main>
   </body>
 </html>
